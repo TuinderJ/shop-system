@@ -1,0 +1,5 @@
+CREATE TABLE customers (
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR,
+  notes TEXT
+)

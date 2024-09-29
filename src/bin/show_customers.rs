@@ -10,12 +10,13 @@ fn main() {
         .limit(5)
         .select(Customer::as_select())
         .load(connection)
-        .expect("Error loading customers")
+        .expect("Error loading customers");
 
     println!("Displaying {} customers.", results.len());
     for customer in results {
+        println!("{}", customer.id);
         println!("{}", customer.name);
-        println!("------------\n");
-        println!("{}", customer.notes);
+        println!("\n------------\n");
+        println!("{:?}", customer.notes);
     }
 }

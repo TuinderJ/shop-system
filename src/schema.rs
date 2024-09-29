@@ -3,7 +3,7 @@
 diesel::table! {
     customers (id) {
         id -> Integer,
-        name -> Nullable<Text>,
+        name -> Text,
         notes -> Nullable<Text>,
     }
 }
@@ -11,9 +11,9 @@ diesel::table! {
 diesel::table! {
     vehicles (vin) {
         vin -> Text,
-        year -> Nullable<Integer>,
-        make -> Nullable<Text>,
-        model -> Nullable<Text>,
+        year -> Integer,
+        make -> Text,
+        model -> Text,
         customer_id -> Integer,
     }
 }

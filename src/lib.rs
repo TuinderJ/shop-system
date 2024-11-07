@@ -4,7 +4,8 @@ pub mod schema;
 use diesel::prelude::*;
 use dotenvy::dotenv;
 use std::env;
-use self::models::{NewCustomer, Customer, NewVehicle, Vehicle};
+use self::models::{NewCustomer, Customer};
+// use self::models::{NewCustomer, Customer, NewVehicle, Vehicle};
 
 pub fn establish_connection() -> SqliteConnection {
     dotenv().ok();
